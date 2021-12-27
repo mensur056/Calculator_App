@@ -4,7 +4,7 @@ class CalculatorButton extends StatelessWidget {
   final String text;
   final int fillColor;
   final int textColor;
-  final double textSize;
+  final double textSize=23;
   final Function callBack;
 
   const CalculatorButton(
@@ -12,7 +12,7 @@ class CalculatorButton extends StatelessWidget {
       required this.callBack,
       required this.fillColor,
       required this.textColor,
-      required this.textSize});
+      textSize});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class CalculatorButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
           child: Text(
             text,
-            style: TextStyle(fontSize: textSize),
+            style: TextStyle(fontSize: textSize,fontWeight: FontWeight.bold),
           ),
           color: Color(fillColor),
           textColor: Color(textColor),

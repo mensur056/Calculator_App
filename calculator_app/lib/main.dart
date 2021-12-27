@@ -80,7 +80,7 @@ class _MyCalculatorState extends State<MyCalculator> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blueGrey),
       home: Scaffold(
-        backgroundColor: Color(0xFF0A0E21),
+        backgroundColor: Color(0xFF22252d),
         appBar: AppBar(
           title: Text(
             'Calculator',

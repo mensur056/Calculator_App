@@ -90,7 +90,12 @@ class _MyCalculatorState extends State<MyCalculator> {
             Expanded(
               flex: 5,
               child: Container(
-                color: Color(0xFF292d36),
+                decoration: BoxDecoration(
+                  color: Color(0xFF292d36),
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(50),
+                      topLeft: Radius.circular(50)),
+                ),
                 child: Column(
                   children: [
                     Row(
@@ -122,7 +127,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                           text: '/',
                           textColor: 0xFFf7f7f7,
                           textSize: 20,
-                          fillColor:0xFF272b33,
+                          fillColor: 0xFF272b33,
                         ),
                       ],
                     ),

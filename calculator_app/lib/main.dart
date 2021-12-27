@@ -39,8 +39,8 @@ class _MyCalculatorState extends State<MyCalculator> {
       res = textToDisplay.substring(0, textToDisplay.length - 1);
     } else if (btnVal == '+' ||
         btnVal == '-' ||
-        btnVal == '/' ||
-        btnVal == 'X') {
+        btnVal == '÷' ||
+        btnVal == 'x') {
       firstNum = int.parse(textToDisplay);
       res = '';
       operation = btnVal;
@@ -56,12 +56,12 @@ class _MyCalculatorState extends State<MyCalculator> {
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
       }
-      if (operation == 'X') {
+      if (operation == 'x') {
         res = (firstNum * secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
       }
-      if (operation == '/') {
+      if (operation == '÷') {
         res = (firstNum / secondNum).toString();
         history =
             firstNum.toString() + operation.toString() + secondNum.toString();
@@ -85,22 +85,17 @@ class _MyCalculatorState extends State<MyCalculator> {
           children: [
             Expanded(
               flex: 3,
-              child: Column(mainAxisAlignment: MainAxisAlignment.end,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Container(
-                    color:  Color(0xFF22252d),
-                    child: Text(
-                      history,
-                      style: TextStyle(fontSize: 24, color: Colors.green),
-                    ),
-                    alignment: Alignment(1.0, 20.0),
+                  Text(
+                    history,
+                    style: TextStyle(fontSize: 24, color: Colors.green),
                   ),
-                  Container(
-                    color:  Color(0xFF22252d),
-                    child: Text(
-                      textToDisplay,
-                      style: TextStyle(fontSize: 48, color: Colors.green),
-                    ),  alignment: Alignment(1.0, 20.0),
+                  Text(
+                    textToDisplay,
+                    style: TextStyle(fontSize: 48, color: Colors.green),
                   )
                 ],
               ),
@@ -139,7 +134,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                         ),
                         CalculatorButton(
                           callBack: btnOnClick,
-                          text: '/',
+                          text: '÷',
                           textColor: 0xFFea3d3e,
                           fillColor: 0xFF272b33,
                         ),
@@ -168,7 +163,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                         ),
                         CalculatorButton(
                           callBack: btnOnClick,
-                          text: 'X',
+                          text: 'x',
                           textColor: 0xFFea3d3e,
                           fillColor: 0xFF272b33,
                         ),
